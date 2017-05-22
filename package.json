@@ -1,0 +1,19 @@
+{
+  "name": "bloom-users",
+  "version": "0.1.0",
+  "description": "User login/registration components for React.js",
+  "main": "source/index.js",
+  "types": "source/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "git@github.com:silentorb/bloom-users.git",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+
+  }
+}
