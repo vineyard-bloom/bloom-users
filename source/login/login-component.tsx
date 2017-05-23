@@ -1,7 +1,6 @@
 import * as React from 'react'
 
 export interface LoginProps {
-
 }
 
 export class Login extends React.PureComponent<LoginProps, any> {
@@ -9,13 +8,6 @@ export class Login extends React.PureComponent<LoginProps, any> {
   handleLogin = (e) => {
     e.preventDefault()
     return this.props.userService.login(this.state.username, this.state.password, this.state.twoFactor)
-  }
-
-  handleChange = (e) => {
-    const target = e.target
-    this.setState({
-      [target.name]: target.value
-    })
   }
 
   render() {
