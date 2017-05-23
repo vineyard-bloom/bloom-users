@@ -1,3 +1,6 @@
+import {Login} from "./login-component";
+import * as React from 'react'
+
 export class LoginManager {
   stateOwner
   constructor(owner) {
@@ -9,5 +12,9 @@ export class LoginManager {
     this.stateOwner.setState({
       [target.name]: target.value
     })
+  }
+
+  createComponent() {
+    return React.createElement(Login, null)
   }
 }
