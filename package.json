@@ -2,8 +2,8 @@
   "name": "bloom-users",
   "version": "0.1.0",
   "description": "User login/registration components for React.js",
-  "main": "source/index.js",
-  "types": "source/index.d.ts",
+  "main": "source/index.ts",
+  "types": "source/index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,6 +13,7 @@
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^15.0.24",
+    "@types/react-bootstrap": "0.0.49",
     "@types/react-dom": "^15.5.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
