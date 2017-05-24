@@ -13,17 +13,16 @@ export interface UserService {
 
 export class LoginManager {
   stateOwner: React.Component<any, LoginOwnerState>
-  loginService: LoginService
-
-  constructor(stateOwner: React.Component<any, LoginOwnerState>, loginService: LoginService) {
+  onSubmit
+  constructor(stateOwner: React.Component<any, LoginOwnerState>, onSubmit) {
     this.stateOwner = stateOwner
-    this.loginService = loginService
+    this.onSubmit = onSubmit
   }
 
-  onLogin = e => {
-    e.preventDefault()
-    return this.loginService.submit(this.getUserFields())
-  }
+  // onLogin = e => {
+  //   e.preventDefault()
+  //   return this.loginService.submit(this.getUserFields())
+  // }
 
   getUserFields(): LoginUserFields {
     return this.stateOwner.state.userFields
@@ -36,11 +35,11 @@ export class LoginManager {
     })
   }
 
-  createComponent() {
+  createLogin () {
     return <Login
       userFields={this.getUserFields()}
       onChange={this.onChange}
-      onSubmit={this.onLogin}
+      onSubmit={this.onSubmit}
     />
   }
 }

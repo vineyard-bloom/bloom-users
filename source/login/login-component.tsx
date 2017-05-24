@@ -12,46 +12,43 @@ export class Login extends React.PureComponent<LoginProps, any> {
 
   onSubmit = e => {
     e.preventDefault()
-    this.props.onSubmit()
+    this.props.onSubmit(this.props.userFields)
   }
 
   render() {
     const userFields = this.props.userFields
 
-    return (<div className='container vertical-center'>
-        <Panel header={<h3 className='text-center'>Please Sign In</h3>} className='vertical-center'>
-          <form onSubmit={this.onSubmit}>
-            <FormGroup controlId='formBasicText'>
-              <FormControl
-                type='text'
-                name='username'
-                value={userFields.username}
-                placeholder='Username'
-                onChange={this.props.onChange}
-              />
-              <FormControl
-                type='password'
-                name='password'
-                value={userFields.password}
-                placeholder='Password'
-                onChange={this.props.onChange}
-              />
-              <FormControl
-                type='password'
-                name='twoFactor'
-                value={userFields.twoFactor}
-                placeholder='2FA Code'
-                onChange={this.props.onChange}
-              />
-            </FormGroup>
-            <div className='text-center'>
-              <Button type='submit' className='float-right'>
-                Submit
-              </Button>
-            </div>
-          </form>
-        </Panel>
-      </div>
+    return (
+      <form onSubmit={this.onSubmit}>
+        <FormGroup controlId='formBasicText'>
+          <FormControl
+            type='text'
+            name='username'
+            value={userFields.username}
+            placeholder='Username'
+            onChange={this.props.onChange}
+          />
+          <FormControl
+            type='password'
+            name='password'
+            value={userFields.password}
+            placeholder='Password'
+            onChange={this.props.onChange}
+          />
+          <FormControl
+            type='password'
+            name='twoFactor'
+            value={userFields.twoFactor}
+            placeholder='2FA Code'
+            onChange={this.props.onChange}
+          />
+        </FormGroup>
+        <div className='text-center'>
+          <Button type='submit' className='float-right'>
+            Submit
+          </Button>
+        </div>
+      </form>
     )
   }
 }
