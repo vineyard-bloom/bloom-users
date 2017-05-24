@@ -3,3 +3,9 @@ export interface LoginUserFields {
   password: string
   twoFactor: string
 }
+
+export interface RegistrationUserFields {
+  username: string
+  password: string
+  twoFactor: string
+}
