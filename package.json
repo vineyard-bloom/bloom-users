@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "git@github.com:silentorb/bloom-users.git",
+  "repository": "git@github.com:vineyardbloom/bloom-users.git",
   "author": "",
   "license": "MIT",
   "dependencies": {
