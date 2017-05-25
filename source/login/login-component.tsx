@@ -17,28 +17,27 @@ export class Login extends React.PureComponent<LoginProps, any> {
 
   render() {
     const userFields = this.props.userFields
-
     return (
       <form onSubmit={this.onSubmit}>
         <FormGroup controlId='formBasicText'>
           <FormControl
             type='text'
             name='username'
-            value={userFields.username}
+            value={this.props.userFields.username}
             placeholder='Username'
             onChange={this.props.onChange}
           />
           <FormControl
             type='password'
             name='password'
-            value={userFields.password}
+            value={this.props.userFields.password}
             placeholder='Password'
             onChange={this.props.onChange}
           />
           <FormControl
             type='password'
             name='twoFactor'
-            value={userFields.twoFactor}
+            value={this.props.userFields.twoFactor}
             placeholder='2FA Code'
             onChange={this.props.onChange}
           />
