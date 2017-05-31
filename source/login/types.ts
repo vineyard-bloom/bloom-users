@@ -1,7 +1,7 @@
 export interface LoginUserFields {
   username?: string
   password?: string
-  twoFactor?: string
+  twoFactorConfirmCode?: string
 }
 
 export interface RegistrationUserFields {
@@ -10,5 +10,5 @@ export interface RegistrationUserFields {
   passwordConfirm?: string
   email?: string
   ethPublicAddress?: string
-  twoFactor?: string
+  twoFactorConfirmCode?: string
 }

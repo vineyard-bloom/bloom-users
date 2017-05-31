@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {StateManager} from "../common/state-manager"
-import {Password, PasswordConfirm, Username, Email} from "./components"
+import {Password, PasswordConfirm, Username, Email, EthAddress} from "./components"
 import {RegistrationUserFields} from "../login/types"
 
  interface RegistrationOwnerState {
@@ -66,7 +66,7 @@ export class RegistrationManager {
   createEthPublicAddress () {
     const { ethPublicAddress } = this.stateOwner.state.userFields
     return (
-      <Email
+      <EthAddress
         onChange={this.onChange}
         value={ethPublicAddress}
       />

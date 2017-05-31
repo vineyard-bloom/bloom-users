@@ -36,8 +36,8 @@ export class Login extends React.PureComponent<LoginProps, any> {
           />
           <FormControl
             type='password'
-            name='twoFactor'
-            value={this.props.userFields.twoFactor}
+            name='twoFactorConfirmCode'
+            value={this.props.userFields.twoFactorConfirmCode}
             placeholder='2FA Code'
             onChange={this.props.onChange}
           />
