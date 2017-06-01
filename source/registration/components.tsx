@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {FormControl} from "react-bootstrap";
+import { FormControl, FormGroup } from "react-bootstrap";
 
 export interface FieldProps {
   onChange
@@ -7,16 +7,25 @@ export interface FieldProps {
 }
 
 export class Username extends React.PureComponent<FieldProps, any> {
+  getValidationState:() => any = () => {
+    // const len = this.props.value.length
+    // if ()
+    return 'success'
+  }
+
   render() {
     return (
-      <FormControl
-        type='text'
-        name='username'
-        value={this.props.value}
-        onChange={this.props.onChange}
-        bsSize='large'
-        autoFocus
-      />
+      <FormGroup controlId='formRegisterUsername' validationState={this.getValidationState()}>
+        <label>Username</label>
+        <FormControl
+          type='text'
+          name='username'
+          value={this.props.value}
+          onChange={this.props.onChange}
+          bsSize='large'
+          autoFocus
+        />
+      </FormGroup>
     )
   }
 }
@@ -79,7 +88,7 @@ export class EthAddress extends React.PureComponent<FieldProps, any> {
 }
 
 export class twoFactorPin extends React.PureComponent<FieldProps, any> {
-  render () {
+  render() {
     return (
       <FormControl
         type='text'
