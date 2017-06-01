@@ -13,8 +13,8 @@ export class Username extends React.PureComponent<FieldProps, any> {
         type='text'
         name='username'
         value={this.props.value}
-        placeholder='Username'
         onChange={this.props.onChange}
+        bsSize='large'
         autoFocus
       />
     )
@@ -28,7 +28,7 @@ export class Password extends React.PureComponent<FieldProps, any> {
         type='password'
         name='password'
         value={this.props.value}
-        placeholder='Password'
+        bsSize='large'
         onChange={this.props.onChange}
       />
     )
@@ -42,7 +42,7 @@ export class PasswordConfirm extends React.PureComponent<FieldProps, any> {
         type='password'
         name='passwordConfirm'
         value={this.props.value}
-        placeholder='Confirm Password'
+        bsSize='large'
         onChange={this.props.onChange}
       />
     )
@@ -56,7 +56,7 @@ export class Email extends React.PureComponent<FieldProps, any> {
         type='text'
         name='email'
         value={this.props.value}
-        placeholder='Email'
+        bsSize='large'
         onChange={this.props.onChange}
       />
     )
@@ -70,7 +70,7 @@ export class EthAddress extends React.PureComponent<FieldProps, any> {
         type='text'
         name='ethPublicAddress'
         value={this.props.value}
-        placeholder='ETH Public Address'
+        bsSize='large'
         onChange={this.props.onChange}
         autoFocus
       />
@@ -85,7 +85,7 @@ export class twoFactorPin extends React.PureComponent<FieldProps, any> {
         type='text'
         name='twoFactorConfirmCode'
         value={this.props.value}
-        placeholder='Your Verification Pin'
+        bsSize='large'
         onChange={this.props.onChange}
         autoFocus
       />
