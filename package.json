@@ -1,6 +1,6 @@
 {
   "name": "bloom-users",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "User login/registration components for React.js",
   "main": "source/index.ts",
   "types": "source/index.ts",
