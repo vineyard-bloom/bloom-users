@@ -7,3 +7,4 @@ test/**/*.js
 test/**/*.d.ts
 config.json
 *.jsx
+yarn.lock
