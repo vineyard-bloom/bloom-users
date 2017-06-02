@@ -1,10 +1,10 @@
 import * as React from 'react'
-import {StateManager} from "../common/state-manager"
-import {Password, PasswordConfirm, Username, Email, EthAddress} from "./components"
-import {RegistrationUserFields} from "../login/types"
+import { StateManager } from "../common/state-manager"
+import { Password, PasswordConfirm, Username, Email, EthAddress } from "./components"
+import { RegistrationUserFields } from "../login/types"
 
- interface RegistrationOwnerState {
-  userFields:RegistrationUserFields
+interface RegistrationOwnerState {
+  userFields: RegistrationUserFields
 }
 
 export class RegistrationManager {
@@ -18,12 +18,12 @@ export class RegistrationManager {
     const target = e.target
     const userFields = Object.assign({}, this.stateOwner.state.userFields)
     userFields[target.name] = target.value
-    this.stateOwner.setState({ 
+    this.stateOwner.setState({
       userFields: userFields
     })
   }
 
-  createUsername () {
+  createUsername() {
     const { username } = this.stateOwner.state.userFields
     return (
       <Username
@@ -33,7 +33,7 @@ export class RegistrationManager {
     )
   }
 
-  createPassword () {
+  createPassword() {
     const { password } = this.stateOwner.state.userFields
     return (
       <Password
@@ -43,17 +43,18 @@ export class RegistrationManager {
     )
   }
 
-  createPasswordConfirm () {
-    const { passwordConfirm } = this.stateOwner.state.userFields
+  createPasswordConfirm() {
+    const { password, passwordConfirm } = this.stateOwner.state.userFields
     return (
       <PasswordConfirm
         onChange={this.onChange}
         value={passwordConfirm}
+        password={password}
       />
     )
   }
 
-   createEmail () {
+  createEmail() {
     const { email } = this.stateOwner.state.userFields
     return (
       <Email
@@ -61,9 +62,9 @@ export class RegistrationManager {
         value={email}
       />
     )
-  } 
+  }
 
-  createEthPublicAddress () {
+  createEthPublicAddress() {
     const { ethPublicAddress } = this.stateOwner.state.userFields
     return (
       <EthAddress
