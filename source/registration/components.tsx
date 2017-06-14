@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { FormControl, FormGroup } from "react-bootstrap";
+import { FormControl, FormGroup, Tooltip, Popover, OverlayTrigger } from "react-bootstrap";
 
 export interface FieldProps {
   onChange
@@ -45,9 +45,17 @@ export class Password extends React.PureComponent<FieldProps, any> {
     }
   }
   render() {
+    const tip = (
+      <Popover id="popover-trigger-click-root-closes" title="Password">
+        Your password must be at least 8 characters and contain numbers and symbols.
+      </Popover>
+    )
     return (
       <FormGroup controlId='formRegisterPassword' validationState={this.validatePassword()}>
         <label>Password</label>
+        <OverlayTrigger trigger="click" rootClose placement="right" overlay={tip}>
+          <span className='glyphicon glyphicon-question-sign registration-icon' />
+        </OverlayTrigger>
         <FormControl
           type='password'
           name='password'
@@ -115,9 +123,17 @@ export class EthAddress extends React.PureComponent<FieldProps, any> {
     }
   }
   render() {
+    const tip = (
+      <Popover id="popover-trigger-click-root-closes" title="Ethereum Address">
+        SALT is an ERC20 token. You will receive your SALT tokens at the ETH public address provided. For instructions, click here.
+      </Popover>
+    )
     return (
       <FormGroup controlId='formRegisterEth' validationState={this.validateEth()}>
         <label>ETH Public Address</label>
+        <OverlayTrigger trigger="click" rootClose placement="right" overlay={tip}>
+          <span className='glyphicon glyphicon-question-sign registration-icon' />
+        </OverlayTrigger>
         <FormControl
           type='text'
           name='ethPublicAddress'
