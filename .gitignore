@@ -1,10 +1,9 @@
 .idea
 node_modules
 npm-*
-*.js.map
-*.js
 test/**/*.js
 test/**/*.d.ts
-config.json
 *.jsx
 yarn.lock
+yarn-*
+.vscode
